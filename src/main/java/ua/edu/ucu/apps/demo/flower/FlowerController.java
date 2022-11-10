@@ -13,11 +13,15 @@ import java.util.List;
 @RequestMapping(path = "/api/v1/flower")
 public class FlowerController {
 
+    private FlowerService flowerService;
+
     @Autowired
-    private IInventory inventory;
+    public FlowerController(FlowerService flowerService) {
+        this.flowerService = flowerService;
+    }
 
     @GetMapping(path = "/all_flowers")
     public List<FlowerPack> getFlowers(){
-        return inventory.getAllFlowerPacks();
+        return flowerService.getAllFlowers();
     }
 }
