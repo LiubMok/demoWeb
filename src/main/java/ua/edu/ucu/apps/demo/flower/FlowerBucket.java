@@ -1,18 +1,18 @@
 package ua.edu.ucu.apps.demo.flower;
-
+import ua.edu.ucu.apps.demo.flower.Flower;
 import ua.edu.ucu.apps.demo.item.Item;
 
 import java.util.ArrayList;
 
 public class FlowerBucket extends Item {
-    private ArrayList<FlowerPack> arr = new ArrayList<>();
+    private ArrayList<Flower> arr = new ArrayList<>();
 
-    public ArrayList<FlowerPack> getBucket() {
+    public ArrayList<Flower> getBucket() {
         return arr;
     }
 
-    public void add(FlowerPack flowerPack) {
-        this.arr.add(flowerPack);
+    public void add(Flower flower) {
+        this.arr.add(flower);
     }
 
     @Override
@@ -22,7 +22,7 @@ public class FlowerBucket extends Item {
 
     public double getPrice() {
         int result = 0;
-        for (FlowerPack element : this.arr) {
+        for (Flower element : this.arr) {
             result += element.getPrice();
         }
         return result;
