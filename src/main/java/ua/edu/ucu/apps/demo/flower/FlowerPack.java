@@ -8,9 +8,15 @@ import ua.edu.ucu.apps.demo.item.Item;
 import java.util.Objects;
 
 @AllArgsConstructor
-public class FlowerPack extends Item {
+//@NoArgsConstructor
+//@Entity
+//@Table
+public class  FlowerPack extends Item {
+//    @Id
+//    @GeneratedValue
+//    private int id;
     @Getter
-    private final Flower flower;
+    private Flower flower;
     @Setter
     @Getter
     private int quantity;

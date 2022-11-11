@@ -13,7 +13,7 @@ public class InventoryStaticStream implements IInventory {
     private static final List<FlowerPack> db = new ArrayList<>();
 
     public InventoryStaticStream() {
-        createInventory();
+//        createInventory();
     }
 
     @Override
@@ -74,15 +74,15 @@ public class InventoryStaticStream implements IInventory {
         }
         return false;
     }
-    public void createInventory(){
-        addFlowerPack(new FlowerPack(new Flower(40, FlowerColor.RED, 25, FlowerType.ROSE), 15));
-        addFlowerPack(new FlowerPack(new Flower(40, FlowerColor.RED, 25, FlowerType.ROSE), 15));
-        addFlowerPack(new FlowerPack(new Flower(40, FlowerColor.BLUE, 25, FlowerType.ROSE), 15));
-        addFlowerPack(new FlowerPack(new Flower(40, FlowerColor.YELLOW, 25, FlowerType.ROSE), 15));
-        addFlowerPack(new FlowerPack(new Flower(25, FlowerColor.RED, 15, FlowerType.TULIP), 15));
-        addFlowerPack(new FlowerPack(new Flower(25, FlowerColor.BLUE, 15, FlowerType.TULIP), 15));
-        addFlowerPack(new FlowerPack(new Flower(25, FlowerColor.YELLOW, 15, FlowerType.TULIP), 15));
-        addFlowerPack(new FlowerPack(new Flower(25, FlowerColor.YELLOW, 10, FlowerType.CHAMOMILE), 15));
-    }
+//    public void createInventory(){
+//        addFlowerPack(new FlowerPack( new Flower(1, 40, FlowerColor.RED, 25, FlowerType.ROSE), 15));
+//        addFlowerPack(new FlowerPack( new Flower(2, 40, FlowerColor.RED, 25, FlowerType.ROSE), 15));
+//        addFlowerPack(new FlowerPack( new Flower(3, 40, FlowerColor.BLUE, 25, FlowerType.ROSE), 15));
+//        addFlowerPack(new FlowerPack( new Flower(4, 40, FlowerColor.YELLOW, 25, FlowerType.ROSE), 15));
+//        addFlowerPack(new FlowerPack( new Flower(5, 25, FlowerColor.RED, 15, FlowerType.TULIP), 15));
+//        addFlowerPack(new FlowerPack( new Flower(6, 25, FlowerColor.BLUE, 15, FlowerType.TULIP), 15));
+//        addFlowerPack(new FlowerPack( new Flower(7, 25, FlowerColor.YELLOW, 15, FlowerType.TULIP), 15));
+//        addFlowerPack(new FlowerPack(new Flower(8, 25, FlowerColor.YELLOW, 10, FlowerType.CHAMOMILE), 15));
+//    }
 }
 

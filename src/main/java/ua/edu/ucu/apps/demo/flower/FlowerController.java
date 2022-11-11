@@ -1,11 +1,7 @@
 package ua.edu.ucu.apps.demo.flower;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import ua.edu.ucu.apps.demo.inventory.IInventory;
-import ua.edu.ucu.apps.demo.inventory.InventoryStaticStream;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,8 +16,13 @@ public class FlowerController {
         this.flowerService = flowerService;
     }
 
-    @GetMapping(path = "/all_flowers")
-    public List<FlowerPack> getFlowers(){
+    @GetMapping
+    public List<Flower> getFlowers(){
         return flowerService.getAllFlowers();
+    }
+
+    @PostMapping
+    public void addFlower(@RequestBody Flower flower){
+        flowerService.addFlower(flower);
     }
 }

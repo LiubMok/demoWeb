@@ -1,17 +1,29 @@
 package ua.edu.ucu.apps.demo.flower;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ua.edu.ucu.apps.demo.inventory.IInventory;
 
 import java.util.List;
 
 @Service
 public class FlowerService {
+    //    @Autowired
+//    private IInventory inventory;
+//
+//    public List<FlowerPack> getAllFlowers(){
+//        return inventory.getAllFlowerPacks();
+//    }
     @Autowired
-    private IInventory inventory;
+    private FlowerRepository flowerRepository;
 
-    public List<FlowerPack> getAllFlowers(){
-        return inventory.getAllFlowerPacks();
+    public FlowerService(FlowerRepository flowerRepository) {
+        this.flowerRepository = flowerRepository;
+    }
+
+    public List<Flower> getAllFlowers(){
+        return flowerRepository.findAll();
+    }
+
+    public void addFlower(Flower flower) {
+        flowerRepository.save(flower);
     }
 }
