@@ -1,7 +1,5 @@
 package ua.edu.ucu.apps.demo.flower;
-import ua.edu.ucu.apps.demo.flower.Flower;
 import ua.edu.ucu.apps.demo.item.Item;
-
 import java.util.ArrayList;
 
 public class FlowerBucket extends Item {

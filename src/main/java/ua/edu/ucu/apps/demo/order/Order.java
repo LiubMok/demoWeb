@@ -4,11 +4,13 @@ import lombok.Getter;
 import ua.edu.ucu.apps.demo.delivery.Delivery;
 import ua.edu.ucu.apps.demo.item.Item;
 import ua.edu.ucu.apps.demo.payment.Payment;
+
+import java.util.LinkedList;
 import java.util.List;
 
 public class Order {
     @Getter
-    private List<Item> items;
+    private final List<Item> items = new LinkedList<>();
     @Getter
     private Payment payment;
     @Getter
