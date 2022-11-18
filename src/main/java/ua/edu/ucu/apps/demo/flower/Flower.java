@@ -24,7 +24,13 @@ public class Flower extends Item {
     private double price;
     private FlowerType flowerType;
 
+    public String getColor() {
+        return color.toString();
+    }
 
+    public String getFlowerType() {
+        return flowerType.toString();
+    }
 //    public void setFlowerType(FlowerType flowerType) {
 //        this.flowerType = flowerType;
 //    }

@@ -32,8 +32,8 @@ public class Order {
         return price;
     }
 
-    public void processOrder() {
-        System.out.println("Process started");
+    public boolean processOrder() {
+        return !items.isEmpty() && payment != null && delivery != null;
     }
 
     public void addItem(Item item) {

@@ -12,13 +12,13 @@ public class PostDeliveryStrategy implements Delivery{
     private String description;
 
     public  PostDeliveryStrategy(){
-        this.name = "DHLDelivery";
-        this.description = "DHLDelivery delivery";
+        this.name = "PostDelivery";
+        this.description = "PostDelivery delivery";
     }
 
     @Override
     public boolean deliver(List<Item> items) {
-        System.out.println("The items have been delivered with the DHL");
+        System.out.println("The items have been delivered with the Post");
         return true;
     }
 }
