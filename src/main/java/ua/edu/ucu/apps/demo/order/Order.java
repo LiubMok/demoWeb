@@ -4,13 +4,20 @@ import lombok.Getter;
 import ua.edu.ucu.apps.demo.delivery.Delivery;
 import ua.edu.ucu.apps.demo.item.Item;
 import ua.edu.ucu.apps.demo.payment.Payment;
+import ua.edu.ucu.apps.demo.user.User;
+import ua.edu.ucu.apps.demo.user.UserService;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Order {
     @Getter
     private final List<Item> items = new LinkedList<>();
+
+    @Getter
+    private final List<User> users = new ArrayList<>();
+
     @Getter
     private Payment payment;
     @Getter
@@ -42,5 +49,17 @@ public class Order {
 
     public void removeItem(Item item) {
         this.items.remove(item);
+    }
+
+
+    public void addUser(User user){
+        users.add(user);
+    }
+    public void removeUser(User user){
+        users.remove(user);
+    }
+
+    public void notifyUsers(){
+        users.forEach(User::update);
     }
 }
